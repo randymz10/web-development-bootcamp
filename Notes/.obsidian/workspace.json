@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "a268a7b1c6e65821",
+        "id": "a63a5c3c931727f1",
         "type": "tabs",
         "children": [
           {
-            "id": "1d5f6d0cbec4b141",
+            "id": "3dfef88a54b751ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to HTML.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "27fd8ef5cd66634e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Intermediate HTML.md",
+                "file": "Multi-Page Websites.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "87da0f2ed334fdc0",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intermediate HTML.md",
+                "file": "Multi-Page Websites.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intermediate HTML.md",
+                "file": "Multi-Page Websites.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intermediate HTML.md"
+                "file": "Multi-Page Websites.md"
               }
             }
           }
@@ -160,9 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fa690862c64d4400",
+  "active": "3dfef88a54b751ee",
   "lastOpenFiles": [
-    "Introduction to HTML.md",
-    "Intermediate HTML.md"
+    "Multi-Page Websites.md",
+    "Intermediate HTML.md",
+    "Introduction to HTML.md"
   ]
 }
