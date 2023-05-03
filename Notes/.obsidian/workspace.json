@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3dfef88a54b751ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Multi-Page Websites.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "04f1b7fcbdac31d2",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -75,6 +62,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "cc20c6cafc827b38",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
