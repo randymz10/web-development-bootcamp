@@ -5,34 +5,36 @@ CSS means  **Cascading Style Sheets** because is a markup language that function
 ## How to add CSS
 
 Exist 3 way to apply CSS in a document HTML:
+
 1) First **Inline** using the **style** attribute in the opening tag of the HTML element and generally is used to test some style or when only need to add style in one element :  
 
-	````html
-	<h1 style: "color:blue">Hello word</h1>
+ ````html
+ <h1 style: "color:blue">Hello word</h1>
+
 `````
 
-2) Second **Internal** using **style** tag put anywhere of the HTML document, however, it is a good practice put the style tag in the head of the document. This generally is used when we need only one document HTML: 
+2) Second **Internal** using **style** tag put anywhere of the HTML document, however, it is a good practice put the style tag in the head of the document. This generally is used when we need only one document HTML:
 
-	````html
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	  <meta charset="UTF-8">
-	  <style>
-	    h1 {
-	      color: red;
-	    }
-	  </style>
-	  <title>Internal</title>
-	</head>
-	
-	<body>
-		<h1>Style Me in Red!</h1>
-	</body>
-	</html>
-	`````
+ ````html
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <style>
+     h1 {
+       color: red;
+     }
+   </style>
+   <title>Internal</title>
+ </head>
+ 
+ <body>
+  <h1>Style Me in Red!</h1>
+ </body>
+ </html>
+ `````
 
-3)  And third **External** that is used in a separatly file .css and a consuming by the tag link with the attributes "rel=stylesheet" that indicate that the relationship is a stylesheet and the attribute "href=./file.css" that indicate the location of the file css. This way is the most used by developers and is a good pratice to have the CSS and the HTML separatly:
+3) And third **External** that is used in a separatly file .css and a consuming by the tag link with the attributes "rel=stylesheet" that indicate that the relationship is a stylesheet and the attribute "href=./file.css" that indicate the location of the file css. This way is the most used by developers and is a good pratice to have the CSS and the HTML separatly:
 
 ```html
 <!DOCTYPE html>
@@ -57,11 +59,11 @@ h1 {
 
 ## CSS Selectors
 
-The selector is a first part of a CSS rule and allow to modify the styles in a HTML element. The syntax of a CSS rule is as follows: 
+The selector is a first part of a CSS rule and allow to modify the styles in a HTML element. The syntax of a CSS rule is as follows:
 
 ```css
 selector {
-	property: value;
+ property: value;
 }
 ````
 
@@ -71,38 +73,39 @@ Exist several types of CSS selectors:
 
 2) Second we have the **Class Selector** that apply CSS rules to all HTML elements that to have the same value in the attribute **class**; the class is a HTML attribute that is applicable in all HTML elements and allow to group various HTML elements in order ti apply the same rule; in CSS when we want to apply CSS rules in a class we put a dot before to class. For example:
 
-	```html
-	<h2 class="red">Title</h2>
-	
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed fermentum
-	libero, nec pharetra ex. Sed viverra erat ut elit rhoncus, sit amet ultricies
-	nisi condimentum. Donec dapibus bibendum velit in egestas. Integer id congue
-	quam, ac varius nunc.</p>
-	
-	<p class="red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-	sed fermentum libero, nec pharetra ex. Sed viverra erat ut elit rhoncus, sit
-	amet ultricies nisi condimentum. Donec dapibus bibendum velit in egestas.
-	Integer id congue quam, ac varius nunc. </p>
+ ```html
+ <h2 class="red">Title</h2>
+ 
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed fermentum
+ libero, nec pharetra ex. Sed viverra erat ut elit rhoncus, sit amet ultricies
+ nisi condimentum. Donec dapibus bibendum velit in egestas. Integer id congue
+ quam, ac varius nunc.</p>
+ 
+ <p class="red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+ sed fermentum libero, nec pharetra ex. Sed viverra erat ut elit rhoncus, sit
+ amet ultricies nisi condimentum. Donec dapibus bibendum velit in egestas.
+ Integer id congue quam, ac varius nunc. </p>
 ````
 
 ```css
-	.red {
-		color: red;	
-	}
+ .red {
+  color: red; 
+ }
 ````
 
 In the example above we can to see that the CSS rule apply only into the elements that to have the attribute `class="red"` .
 
 3) Third we have the **ID Selector** that apply CSS rules in a HTML element by his id; the id is a HTML attribute that function as a identifier in the HTML element, this id is unique and can't to be aplicable in other HTML elements, for example, `<div id="main">Something here's</div>` , this example indicate that element div to have a identifier with the value main; in CSS we put a hash tag before to the id element. For example:
+
 ```html
 <div id="main">
-	something here's
+ something here's
 </div>
 ````
 
 ````css
 #main {
-	font-size: 20px;
+ font-size: 20px;
 }
 ````
 
@@ -112,7 +115,7 @@ In the example above we can to see that the CSS rule apply only into the element
 
 ```css
 *{
-	margin: 0;
+ margin: 0;
 }
 ```
 

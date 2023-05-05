@@ -8,7 +8,7 @@ In HTML is possible to nest elements inside other, is a good practice in order t
 
 ## Anchor Elements
 
-The anchor element serve to add hyperlinks into the HTML document and is identify by the 'a' tag, it has the attribute 'href' that allow to add the link  where we can to go. 
+The anchor element serve to add hyperlinks into the HTML document and is identify by the 'a' tag, it has the attribute 'href' that allow to add the link  where we can to go.
 
 The attribute are a features that allow to expand functionalities in our HTML elements, exist global attributes and attributes especific for some HMTL elements.
 

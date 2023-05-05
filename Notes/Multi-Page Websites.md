@@ -15,6 +15,7 @@ HTML tags are generally made up of an opening tag, a closing tag and within the 
 An HTML document has the following sections or boilerplate that are essential. First: the `<!DOCTYPE html>` tag that declares the version of HTML we are using, version 5 being the latest version and the one specified with the tag. Second, the `<html></hmtl>` tag where all the elements of the HTML document are written. Third, within the `<head></head>` tag where the metadata or information that is not visible to the user is placed, such as the format of the text with the `<meta charset="UTF- 8">` or the title seen from the tab bar with the `<title></title>` tag. Fourth we have the body of the HTML document that is specified with the `<body></body>` tag where it spends most of the time and is where all the visual content of the HTML document goes.
 
 It is also important to add indentation between one tag and another to identify the sections of the HTML document, that is, which tags are inside others. This is also called indentation.
+
 - An HTML document would look like this:
 
      ```html
@@ -29,4 +30,4 @@ It is also important to add indentation between one tag and another to identify 
      </body>
      </html>
      ```
-     
+  

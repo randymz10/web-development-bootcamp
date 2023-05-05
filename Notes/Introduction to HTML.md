@@ -14,6 +14,6 @@ The paragraph element serve to separate paragraph from each other, it's very use
 
 ## Self Closing Tags (Void Elements)
 
-The void elements are tags that close by itself, they there aren't content inside, therefore, not have a opening or closing tags, the most used are the <hr /> (horizontal line) and the <br /> (break line) both used to separate the HTML element from each other. For convention we use the space and forward slash to improve the readability of our code, but the same way the browser can read our code without this. 
+The void elements are tags that close by itself, they there aren't content inside, therefore, not have a opening or closing tags, the most used are the <hr /> (horizontal line) and the <br /> (break line) both used to separate the HTML element from each other. For convention we use the space and forward slash to improve the readability of our code, but the same way the browser can read our code without this.
 
 Other thing that we can avoid is use the <br /> to add breaking lines in our paragraph, for that we can add other paragraph element for add new lines, only in specific cases we use the <br /> tag in the same paragraph element. This is useful to impruve our a  accessibility fo the screen readers and blind people.
