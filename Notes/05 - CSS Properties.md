@@ -22,3 +22,49 @@ In Chrome browser we have the developer tools that are very useful in order to r
 
 ## The Box Model (Margin, Padding and Border)
 
+The box model is the structure of the elements in HTML and CSS, in HTML exits elements inline and block and this block elements are comformed by (from external to internal) Margin, border, padding and the element.
+
+- **Margin** is the external space add of the element, is used the property `margin: top-side right-side bottom-side left-side` in CSS and have four values that indicate the margin top, margin right, margin bottom and margin left, for example:
+
+```css 
+div {
+	margin: 20px 10px 30px 5px;
+}
+
+element {
+	margin: top right bottom left;
+}
+```
+
+Also is possible to add only two values being the first value the margin top and bottom and the second value the margin right and left.
+
+```css 
+div {
+	margin: 20px 40;
+}
+
+element {
+	margin: top/bottom right/left;
+}
+```
+
+Other way of set the margin for each side is using the property `margin-side`, for example: 
+
+```css 
+div {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+```
+
+- **Border** is the line that separate the margin of the padding and is used the property `border: size type color`  in it is indicate the size, the type and the color of the border, for example: 
+
+```css 
+div {
+	border: 20px solid black;
+}
+```
+
+- **Padding** is the internal space of the box and function of the same ways that the margin. 

@@ -10,7 +10,6 @@ Exist 3 way to apply CSS in a document HTML:
 
  ````html
  <h1 style: "color:blue">Hello word</h1>
-
 `````
 
 2) Second **Internal** using **style** tag put anywhere of the HTML document, however, it is a good practice put the style tag in the head of the document. This generally is used when we need only one document HTML:
