@@ -35,3 +35,6 @@ li {
 ```
 
    In the example above the red is applied over the rest.
+
+## Combining CSS Selectors (How to target specific elements to style)
+
