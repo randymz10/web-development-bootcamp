@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d5aa2f4572c5b3d5",
+        "id": "e4bccabac6a08595",
         "type": "tabs",
         "children": [
           {
-            "id": "5898e727bc820a2b",
+            "id": "fd876b7784910013",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -112,7 +112,7 @@
               "type": "outgoing-link",
               "state": {
                 "file": "06 - Intermediate CSS.md",
-                "linksCollapsed": false,
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -124,7 +124,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
@@ -138,11 +138,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -155,10 +156,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5898e727bc820a2b",
+  "active": "fd876b7784910013",
   "lastOpenFiles": [
-    "05 - CSS Properties.md",
+    "img/position.png",
+    "img/Screenshot from 2023-05-09 16-15-49.png",
+    "img/cascade.png",
+    "img/Screenshot from 2023-05-08 17-03-36.png",
+    "img",
     "06 - Intermediate CSS.md",
+    "05 - CSS Properties.md",
     "04 - Introduction to CSS.md",
     "03 - Multi-Page Websites.md",
     "02 - Intermediate HTML.md",
