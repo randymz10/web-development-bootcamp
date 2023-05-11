@@ -15,3 +15,13 @@ The float property serve to wrap elements and the clear property to clear a wrap
 - **Clear** generally use the values left, right and both.
 
 ## Responsive Websites (Making websites look good on all screen sizes)
+
+Today we have many devices in order to consuming websites as Desktops, Laptops, Tablets and smartphones, responsive is responding to different screens size. We have fou ways to do our website responsive:
+
+- Media Queries
+- CSS Grid
+- CSS Flexbox
+- External Frameworks e.g. Bootstrap
+
+## Media Queries (adding breakpoints to define responsive layouts)
+
