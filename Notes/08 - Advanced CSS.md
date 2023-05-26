@@ -25,3 +25,22 @@ Today we have many devices in order to consuming websites as Desktops, Laptops, 
 
 ## Media Queries (adding breakpoints to define responsive layouts)
 
+The media queries are rules applied puting the max and the min width. This is used establishing diferents width screen. A media querie is written as follows: 
+
+```css
+@media (max-width:900px){
+	/* CSS Rules */
+}
+```
+
+The max and min width can be combine with the and operator: 
+
+```css 
+@media (min-width:900px) and (max-width:600px){
+	/*CSS Rules*/
+}
+
+@media (max-width:600px) and (min-width:900px){
+	/* CSS Rules */
+}
+```
