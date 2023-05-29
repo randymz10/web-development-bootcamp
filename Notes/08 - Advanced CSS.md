@@ -1,3 +1,5 @@
+# Advanced CSS
+
 ## CSS Display (Block, Inline and Inline-Block)
 
 Exits many different ways to show the elements in the screen with the property display, the most used are:
@@ -25,22 +27,22 @@ Today we have many devices in order to consuming websites as Desktops, Laptops, 
 
 ## Media Queries (adding breakpoints to define responsive layouts)
 
-The media queries are rules applied putting the max and the min width. This is used establishing different width screen. A media queries is written as follows: 
+The media queries are rules applied putting the max and the min width. This is used establishing different width screen. A media queries is written as follows:
 
 ```css
 @media (max-width:900px){
-	/* CSS Rules */
+ /* CSS Rules */
 }
 ```
 
-The max and min width can be combine with the and operator: 
+The max and min width can be combine with the and operator:
 
-```css 
+```css
 @media (min-width:900px) and (max-width:600px){
-	/*CSS Rules*/
+ /*CSS Rules*/
 }
 
 @media (max-width:600px) and (min-width:900px){
-	/* CSS Rules */
+ /* CSS Rules */
 }
 ```
