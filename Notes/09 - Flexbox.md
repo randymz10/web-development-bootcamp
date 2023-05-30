@@ -29,4 +29,3 @@ The last property is `align-content` this is used when the `flex-wrap` is set to
 For more information visit [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
 
 ## Flex Sizing (Shrinking and Growing)
-
