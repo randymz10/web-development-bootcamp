@@ -54,4 +54,4 @@ Also we can to limit the size of our template using the keyword `minmax(min-valu
 
 When the quantity of elements of our grid layout exceed the rows ans columns we can to set the size of them using the property `grid-auto-rows`.
 
-## Grid Item Placement
+For more information visit [css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/).
