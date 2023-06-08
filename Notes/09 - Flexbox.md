@@ -27,5 +27,3 @@ When we want to align just one child element we can use `align-self` instead `al
 The last property is `align-content` this is used when the `flex-wrap` is set to `wrap` al allow to the content instead the `align-items`.
 
 For more information visit [css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox).
-
-## Flex Sizing (Shrinking and Growing)
