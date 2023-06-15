@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7c048adf13b4c215",
+        "id": "280cbf78712a2f4e",
         "type": "tabs",
         "children": [
           {
-            "id": "bf3d3257cbbf5482",
+            "id": "8b1dae153b034416",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08 - Advanced CSS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b929e4c7018871e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "09 - Flexbox.md",
+                "file": "03 - Intermediate HTML.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "87da0f2ed334fdc0",
@@ -107,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09 - Flexbox.md",
+                "file": "03 - Intermediate HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "09 - Flexbox.md",
+                "file": "03 - Intermediate HTML.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09 - Flexbox.md"
+                "file": "03 - Intermediate HTML.md"
               }
             }
           }
@@ -169,10 +155,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b929e4c7018871e0",
+  "active": "8b1dae153b034416",
   "lastOpenFiles": [
     "08 - Advanced CSS.md",
     "09 - Flexbox.md",
+    "10 - Grid.md",
+    "11 - Bootstrap Framework.md",
     "03 - Intermediate HTML.md",
     "02 - Introduction to HTML.md",
     "04 - Multi-Page Websites.md",
