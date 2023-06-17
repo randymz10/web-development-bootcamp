@@ -1,0 +1,103 @@
+:root {
+    --html5: #e44d26;
+    --css3: #2465f1;
+    --js: #f0db4f;
+    --bootstrap: #7911f7;
+    --angular: #dd0031;
+    --java: #dc232b;
+    --aws: #eb911a;
+    --mysql: #006f88;
+    --spring-boot: #66aa3b;
+    --git: #e44c30;
+    --mendix: #146ff4;
+    --ts: #135897;
+}
+
+.nav-item:hover {
+    /* background-color: #0d6efd; */
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: 300ms;
+}
+
+.nav-item{
+    transition: 300ms;
+}
+
+.nav-item a:hover {
+    font-weight: bold;
+}
+
+
+.effect{
+    animation: effect 0.3s infinite;
+}
+
+@keyframes effect {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.skill-icon {
+    font-size: 4rem;
+    transition: 300ms all;
+}
+
+.html5:hover {
+    color: var(--html5);
+}
+
+.css3:hover {
+    color: var(--css3);
+}
+
+.js:hover {
+    color: var(--js);
+}
+
+.bootstrap:hover {
+    color: var(--bootstrap);
+}
+
+.angular:hover {
+    color: var(--angular);
+}
+
+.java:hover {
+    color: var(--java);
+}
+
+.aws:hover {
+    color: var(--aws); 
+}
+
+.mysql:hover {
+    color: var(--mysql);
+}
+
+.spring-boot:hover {
+    color: var(--spring-boot);
+}
+
+.git:hover {
+    color: var(--git);
+}
+
+.mendix:hover{
+    color: var(--mendix);
+}
+
+.ts:hover{
+    color: var(--ts)
+}
