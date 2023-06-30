@@ -2,9 +2,9 @@
 
 ## Display: Grid
 
-**Grid** is another way to design our web layouts in 2 dimension. In combination with flexbox are a powerfull tools for web design. Commonly we are going to see both too working together, flebox for unidimensional design and grid for bidimensional design.
+**Grid** is another way to design our web layouts in 2 dimension. In combination with flexbox are a powerful tools for web design. Commonly we are going to see both too working together, flexbox for uni dimensional design and grid for bi dimensional design.
 
-In order to do a grid container we must to set the property `display` like `grid` (`display: grid`) and define the template colummms and rows:
+In order to do a grid container we must to set the property `display` like `grid` (`display: grid`) and define the template columns and rows:
 
 ```css
 .container{
@@ -18,7 +18,7 @@ In order to do a grid container we must to set the property `display` like `grid
 
 ## Grid Sizing (How to Size Columns and Rows)
 
-About the template grid we can to set the stablish the size  of our columns and rows using fixed values like `px` and `rem`, for example:
+About the template grid we can to set the establish the size  of our columns and rows using fixed values like `px` and `rem`, for example:
 
 ```css
 .container {
@@ -30,7 +30,7 @@ About the template grid we can to set the stablish the size  of our columns and 
 
 When we set a fixed template cannot be changed, that is, we cannot set a height or a width and it is not responsive.
 
-A shorthand to write the colummns and rows is using the keyword `grid-template` separanding the columns by the row with a `/` between, for example:
+A shorthand to write the columns and rows is using the keyword `grid-template` separating the columns by the row with a `/` between, for example:
 
 ```css
 .container {
@@ -39,11 +39,11 @@ A shorthand to write the colummns and rows is using the keyword `grid-template` 
 }
 ```
 
-It isn't no recomended to use this shorthand when we are learning because can be confusing use it.
+It isn't no recommended to use this shorthand when we are learning because can be confusing use it.
 
-Another unit sizing commonly used is the fraction `fr` that define the different areas of our lyout with ratios for sizes.
+Another unit sizing commonly used is the fraction `fr` that define the different areas of our layout with ratios for sizes.
 
-Also we can to limit the size of our template using the keyword `minmax(min-value, max-value)` or set automactly with the keyword `auto`, for example:
+Also we can to limit the size of our template using the keyword `minmax(min-value, max-value)` or set automatically with the keyword `auto`, for example:
 
 ```css
 .container {
