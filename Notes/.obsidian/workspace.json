@@ -4,28 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "7c048adf13b4c215",
+        "id": "8af88b41a9b0ce5e",
         "type": "tabs",
         "children": [
           {
-            "id": "bf3d3257cbbf5482",
+            "id": "a9d9f4c9e5d81518",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "08 - Advanced CSS.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "b929e4c7018871e0",
+            "id": "7c37fe1db149c19c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09 - Flexbox.md",
+                "file": "12 - Web Design School.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "87da0f2ed334fdc0",
@@ -107,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09 - Flexbox.md",
+                "file": "12 - Web Design School.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "09 - Flexbox.md",
+                "file": "12 - Web Design School.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09 - Flexbox.md"
+                "file": "12 - Web Design School.md"
               }
             }
           }
@@ -169,16 +164,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b929e4c7018871e0",
+  "active": "7c37fe1db149c19c",
   "lastOpenFiles": [
-    "08 - Advanced CSS.md",
+    "07 - Intermediate CSS.md",
+    "06 - CSS Properties.md",
+    "05 - Introduction to CSS.md",
+    "04 - Multi-Page Websites.md",
+    "12 - Web Design School.md",
+    "img/mood.png",
     "09 - Flexbox.md",
+    "08 - Advanced CSS.md",
     "03 - Intermediate HTML.md",
     "02 - Introduction to HTML.md",
-    "04 - Multi-Page Websites.md",
-    "05 - Introduction to CSS.md",
-    "06 - CSS Properties.md",
-    "07 - Intermediate CSS.md",
     "img/position.png",
     "img/Screenshot from 2023-05-09 16-15-49.png",
     "img/cascade.png",
