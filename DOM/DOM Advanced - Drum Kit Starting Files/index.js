@@ -2,11 +2,13 @@ document.querySelectorAll("button").forEach((element) => {
   element.addEventListener("click", () => {
     const buttonInnerHTML = element.innerHTML;
     makeSound (buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   });
 });
 
 document.addEventListener("keydown", (event) => {
   makeSound(event.key);
+  buttonAnimation(event.key);
 });
 
 const makeSound = (key) => {
@@ -42,4 +44,13 @@ const makeSound = (key) => {
             console.log(key);
           break;
       }
+}
+
+const buttonAnimation = (currentKey) => {
+  const activeButton = document.querySelector(`.${currentKey}`);
+  activeButton.classList.add('pressed');
+
+  setTimeout(() => {
+    activeButton.classList.remove('pressed');
+  }, 100);
 }
