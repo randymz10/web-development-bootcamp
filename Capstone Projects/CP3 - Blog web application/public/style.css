@@ -1,0 +1,16 @@
+.hide {
+    display: none;
+}
+
+.nav-item, .nav-item:hover{
+    transition: 300ms;
+}
+
+.nav-item:hover{
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.nav-item .nav-link:hover{
+    font-weight: bold;
+}

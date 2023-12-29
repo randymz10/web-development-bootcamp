@@ -1,0 +1,18 @@
+<% if(locals.articles){ %>
+    <% articles.forEach(element=> { %>
+        <article>
+            <h2 class="display-5 link-body-emphasis mb-1"><%= element.title %></h2>
+            <p class="text-secondary"><%= element.createAt %> by <a href="#"><%= element.author %></a></p>
+            <p><%= element.content %></p>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit<%=element.id %>"><i class="bi bi-pencil-square"></i></button>
+                <form action="/delete" method="post">
+                    <div class="hide">
+                        <input type="text" name="idArticle" id="idArticle" value="<%=element.id %>">
+                    </div>
+                    <button type="submint" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                </form>
+        </article>
+        <%- include('./edit.ejs', {element: element}) %>
+     <% }); %>
+<% } %>
+
