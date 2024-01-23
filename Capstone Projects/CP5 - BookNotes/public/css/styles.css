@@ -7,7 +7,7 @@
 .rating > label {
     cursor: pointer;
     font-size: 3rem;
-    transition: 300ms;
+    transition: 100ms;
 }
 
 .rating > input:checked ~ label,
