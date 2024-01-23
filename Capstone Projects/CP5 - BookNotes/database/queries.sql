@@ -1,11 +1,14 @@
+-- Table
 CREATE TABLE Books (
     ID SERIAL PRIMARY KEY,
     Title VARCHAR(255) NOT NULL,
     Author VARCHAR(255),
     Review TEXT,
+    ISBN VARCHAR(50),
     Link_image VARCHAR(255),
     Rating INT
 );
+-- Populate data
 INSERT INTO books(title, author, notetext, rating)
 VALUES (
         'El hombre mas rico de babilonia',

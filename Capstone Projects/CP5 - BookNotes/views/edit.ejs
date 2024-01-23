@@ -24,6 +24,12 @@
           </div>
 
           <div class="mb-3">
+            <label for="isbn<%= book.id %>" class="form-label">ISBN</label>
+            <input type="text" class="form-control" id="isbn<%= book.id %>" name="isbn" placeholder="ISBN code..."
+            value="<%= book.isbn %>">
+          </div>
+
+          <div class="mb-3">
             <label for="review<%= book.id %>" class="form-label">Review</label>
             <textarea class="form-control" id="review<%= book.id %>" name="review"
               rows="5"><%= book.review %></textarea>
