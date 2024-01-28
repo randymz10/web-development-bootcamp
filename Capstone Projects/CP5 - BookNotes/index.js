@@ -1,16 +1,23 @@
 import express from "express";
-import session from 'express-session';
-import pg from "pg";
 import bodyParser from "body-parser";
-import { Strategy } from "passport";
-import localStrategy from 'passport-local';
-import bcrypt from 'bcrypt';
-
+import pg from "pg";
+import bcrypt from "bcrypt";
+import passport from "passport";
+import session from "express-session";
+import LocalStrategy from "passport-local";
 import "dotenv/config";
 
 const app = express();
 const port = 3000;
 const API_URL = "https://covers.openlibrary.org/b/isbn/";
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 const db = new pg.Pool({
   database: process.env.DB,
@@ -23,6 +30,9 @@ const db = new pg.Pool({
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(passport.initialize());
+app.use(passport.use(session()));
+
 const getBooksFromDb = async () => {
   const result = await db.query("SELECT * FROM books ORDER BY id ASC ");
   return result.rows;
@@ -31,7 +41,10 @@ const getBooksFromDb = async () => {
 app.get("/", async (req, res) => {
   const books = await getBooksFromDb();
   res.status(200);
-  res.render("index.ejs", { books: books });
+  res.render("index.ejs", {
+    books: books,
+    isAuthenticated: req.isAuthenticated(),
+  });
 });
 
 app.post("/new", async (req, res) => {
@@ -46,7 +59,6 @@ app.post("/new", async (req, res) => {
     );
     res.status(201);
   } catch (error) {
-    throw error;
     res.status(500).send("Internal Server error");
   }
   res.redirect("/");
@@ -81,6 +93,83 @@ app.post("/delete", async (req, res) => {
     throw error;
   }
   res.redirect("/");
+});
+
+app.post(
+  "/login",
+  passport.authenticate("local", {
+    failureRedirect: "/helllo",
+  }),
+  (req, res) => {
+    console.log(req.body);
+  }
+);
+
+// passport.use(
+//   new LocalStrategy(async function verify(username, password, cb) {
+//     try {
+//       const result = await db.query("SELECT * FROM users WHERE email = $1", [
+//         username,
+//       ]);
+//       console.log(result);
+//       if (result.rows.length > 0) {
+//         const user = result.rows[0];
+//         if (password === user.password) {
+//           return cb(null, user);
+//         } else {
+//           return cb(null, false);
+//         }
+//         // const hashedPassword = user.password;
+//         // bcrypt.compare(password, hashedPassword, (err, valid) => {
+//         //   if (err) {
+//         //     console.error("Error comparing passwords: ", err);
+//         //     return cb(err);
+//         //   } else {
+//         //     if (valid) {
+//         //       return cb(null, user);
+//         //     } else {
+//         //       return cb(null, false);
+//         //     }
+//         //   }
+//         // });
+//       } else {
+//         return cb("User not found");
+//       }
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   })
+// );
+
+passport.use(
+  "local",
+  new LocalStrategy(async function verify(username, password, cb) {
+    try {
+      const result = await db.query("SELECT * FROM users WHERE email = $1 ", [
+        username,
+      ]);
+      if (result.rows.length > 0) {
+        const user = result.rows[0];
+        if (password === user.password) {
+          return cb(null, user);
+        } else {
+          return cb(null, false);
+        }
+      } else {
+        return cb("User not found");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  })
+);
+
+passport.serializeUser((user, cb) => {
+  cb(null, user);
+});
+
+passport.deserializeUser((user, cb) => {
+  cb(null, user);
 });
 
 app.listen(port, () => {
