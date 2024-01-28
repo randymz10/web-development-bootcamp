@@ -1,13 +1,20 @@
--- Table
+-- Tables
 CREATE TABLE Books (
-    ID SERIAL PRIMARY KEY,
-    Title VARCHAR(255) NOT NULL,
-    Author VARCHAR(255),
-    Review TEXT,
-    ISBN VARCHAR(50),
-    Link_image VARCHAR(255),
-    Rating INT
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255),
+    review TEXT,
+    isbn VARCHAR(50),
+    link_image VARCHAR(255),
+    rating INT
 );
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+);
+
 -- Populate data
 INSERT INTO books(title, author, notetext, rating)
 VALUES (

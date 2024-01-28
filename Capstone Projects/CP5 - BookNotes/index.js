@@ -1,6 +1,11 @@
 import express from "express";
+import session from 'express-session';
 import pg from "pg";
 import bodyParser from "body-parser";
+import { Strategy } from "passport";
+import localStrategy from 'passport-local';
+import bcrypt from 'bcrypt';
+
 import "dotenv/config";
 
 const app = express();
