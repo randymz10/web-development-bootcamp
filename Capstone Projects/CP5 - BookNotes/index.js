@@ -1,10 +1,10 @@
 import express from "express";
+import session from "express-session";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
 import passport from "passport";
-import session from "express-session";
-import LocalStrategy from "passport-local";
+import { Strategy } from "passport-local";
 import "dotenv/config";
 
 const app = express();
@@ -27,11 +27,10 @@ const db = new pg.Pool({
   port: process.env.DB_PORT,
 });
 
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(passport.initialize());
-app.use(passport.use(session()));
 
 const getBooksFromDb = async () => {
   const result = await db.query("SELECT * FROM books ORDER BY id ASC ");
@@ -40,10 +39,23 @@ const getBooksFromDb = async () => {
 
 app.get("/", async (req, res) => {
   const books = await getBooksFromDb();
+  let message = "";
+  if (req.session.messages) {
+    message = req.session.messages[0];
+  }
+
   res.status(200);
   res.render("index.ejs", {
     books: books,
     isAuthenticated: req.isAuthenticated(),
+    message: message,
+  });
+});
+
+app.get("/logout", (req, res) => {
+  req.logout((err) => {
+    if (err) return next(err);
+    res.redirect("/");
   });
 });
 
@@ -98,71 +110,71 @@ app.post("/delete", async (req, res) => {
 app.post(
   "/login",
   passport.authenticate("local", {
-    failureRedirect: "/helllo",
+    successRedirect: "/",
+    failureRedirect: "/",
+    failureMessage: "Incorrect Username or Password",
   }),
   (req, res) => {
     console.log(req.body);
   }
 );
 
-// passport.use(
-//   new LocalStrategy(async function verify(username, password, cb) {
-//     try {
-//       const result = await db.query("SELECT * FROM users WHERE email = $1", [
-//         username,
-//       ]);
-//       console.log(result);
-//       if (result.rows.length > 0) {
-//         const user = result.rows[0];
-//         if (password === user.password) {
-//           return cb(null, user);
-//         } else {
-//           return cb(null, false);
-//         }
-//         // const hashedPassword = user.password;
-//         // bcrypt.compare(password, hashedPassword, (err, valid) => {
-//         //   if (err) {
-//         //     console.error("Error comparing passwords: ", err);
-//         //     return cb(err);
-//         //   } else {
-//         //     if (valid) {
-//         //       return cb(null, user);
-//         //     } else {
-//         //       return cb(null, false);
-//         //     }
-//         //   }
-//         // });
-//       } else {
-//         return cb("User not found");
-//       }
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   })
-// );
-
 passport.use(
   "local",
-  new LocalStrategy(async function verify(username, password, cb) {
+  new Strategy(async function verify(username, password, cb) {
     try {
-      const result = await db.query("SELECT * FROM users WHERE email = $1 ", [
+      const result = await db.query("SELECT * FROM users WHERE email = $1", [
         username,
       ]);
+      console.log(result);
       if (result.rows.length > 0) {
         const user = result.rows[0];
-        if (password === user.password) {
-          return cb(null, user);
-        } else {
-          return cb(null, false);
-        }
+        const hashedPassword = user.password;
+        bcrypt.compare(password, hashedPassword, (err, valid) => {
+          if (err) {
+            console.error("Error comparing passwords: ", err);
+            return cb(err);
+          } else {
+            if (valid) {
+              return cb(null, user);
+            } else {
+              return cb(null, false);
+            }
+          }
+        });
       } else {
         return cb("User not found");
       }
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   })
 );
+
+// passport.use(
+//   new Strategy(async function verify(username, password, cb) {
+//     try {
+//       const result = await db.query("SELECT * FROM users WHERE email = $1 ", [
+//         username,
+//       ]);
+//       if (result.rows.length > 0) {
+//         const user = result.rows[0];
+//         if (password === user.password) {
+//           console.log("login success");
+//           return cb(null, user);
+//         } else {
+//           console.log("wrong password");
+//           return cb(null, false);
+//         }
+//       } else {
+//         console.log("User not found");
+//         return cb("User not found");
+//       }
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   })
+// );
 
 passport.serializeUser((user, cb) => {
   cb(null, user);
