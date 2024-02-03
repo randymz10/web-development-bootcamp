@@ -25,7 +25,8 @@
       <span class="rating-star"><i class="bi bi-star-fill"></i></span>
     <% } %>
     </p>
-    <p><%= book.review %></p>
+    <p><%= book.review.substring(0, 255)%>...</p>
+    <a class="btn btn-link" href="/view" >Read more...</a>
   </section>
 </article>
 <% }); %> <% } %>
